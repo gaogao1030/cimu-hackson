@@ -15,10 +15,12 @@ ActiveRecord::Schema.define(version: 20150928052603) do
 
   create_table "stores", force: :cascade do |t|
     t.string   "name",       limit: 255
-    t.string   "type",       limit: 255
+    t.string   "kind",       limit: 255
     t.integer  "price",      limit: 4
     t.integer  "distance",   limit: 4
     t.integer  "level",      limit: 4
+    t.string   "logo",       limit: 255
+    t.integer  "creater_id", limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

@@ -1,7 +1,7 @@
 module V1
   class Stores < Grape::API
     namespace :stores do
-      desc "获取附近商店列表 creater_id: 0是官方的,1是个人的"
+      desc "获取附近商店列表 creater_id: 0是官方的,1是个人的 kinds格式为'中餐,西餐'以逗号作为分隔符"
       params do
         optional :kinds, type: String
         optional :min_price, type: Integer

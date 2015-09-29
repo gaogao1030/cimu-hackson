@@ -1,4 +1,7 @@
 source "http://ruby.taobao.org"
+ruby '2.2.1'
+gem "rails_12factor"
+
 
 gem "mysql2", '~> 0.3.13'
 gem 'thin'

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150928052603) do
     t.integer  "level",      limit: 4
     t.string   "logo",       limit: 255
     t.integer  "creater_id", limit: 4
+    t.string   "address",    limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

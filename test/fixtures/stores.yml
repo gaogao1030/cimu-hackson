@@ -4,11 +4,13 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  klass      :string(255)
+#  kind       :string(255)
 #  price      :integer
 #  distance   :integer
 #  level      :integer
 #  logo       :string(255)
+#  creater_id :integer
+#  address    :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

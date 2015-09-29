@@ -1,7 +1,7 @@
 module V1
   module Entities
     class Store < Grape::Entity
-      expose :id,:name,:kind,:price,:level,:distance, :logo ,:creater_id
+      expose :id,:name,:kind,:price,:level,:distance, :logo ,:creater_id,:address
     end
   end
 end

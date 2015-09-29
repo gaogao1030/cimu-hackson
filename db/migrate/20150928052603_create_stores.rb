@@ -8,6 +8,7 @@ class CreateStores < ActiveRecord::Migration
       t.integer :level #评价
       t.string :logo #logo
       t.integer :creater_id #创建人id
+      t.string :address #地址
 
       t.timestamps null: false
     end

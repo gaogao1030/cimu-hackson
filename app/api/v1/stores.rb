@@ -33,7 +33,8 @@ module V1
         requires :price, type: Integer
         requires :distance, type: Integer
         requires :level, type: Integer
-        requires :logo, type: String
+        optional :logo, type: String
+        requires :address, type: String
       end
       post "add" do
        store = Store.new
@@ -42,7 +43,7 @@ module V1
        store.price = params[:price]
        store.distance = params[:distance]
        store.level = params[:level]
-       store.logo = params[:logo]
+       store.logo = params[:logo] || store.default_image
        store.creater_id= 1
        store.save
        present store, with: Entites::Store

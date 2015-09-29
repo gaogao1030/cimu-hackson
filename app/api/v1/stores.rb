@@ -3,7 +3,7 @@ module V1
     namespace :stores do
       desc "获取附近商店列表 creater_id: 0是官方的,1是个人的"
       params do
-        optional :kind, type: String, values:["中餐","西餐","日料","超市","快餐","面点","烧烤"]
+        optional :kinds, type: String
         optional :min_price, type: Integer
         optional :max_price, type: Integer
         optional :min_distance, type: Integer
@@ -14,7 +14,7 @@ module V1
       end
       get "index" do
         stores = Store.ransack(
-          kind_eq: params[:kind],
+          kind_cont_any: params[:kinds].split(","),
           price_gteq: params[:min_price],
           price_lteq: params[:max_price],
           distance_gteq: params[:min_distance],

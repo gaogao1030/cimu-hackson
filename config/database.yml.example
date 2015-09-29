@@ -1,0 +1,26 @@
+default: &default
+  encoding: utf8
+  adapter: mysql2
+  timeout: 5000
+  host: 127.0.0.1
+  port: 3306
+  password:
+  pool: 5
+
+development:
+  <<: *default
+  database: xuan_eat_development
+
+test:
+  <<: *default
+  database: xuan_eat_test
+
+production:
+  <<: *default
+  #heroku
+  host: "host"
+  database: "database"
+  user: "user"
+  port: 5432
+  password: "password"
+  adapter: postgresql

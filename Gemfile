@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "http://ruby.taobao.org"
 ruby '2.2.1'
 gem "rails_12factor"
 

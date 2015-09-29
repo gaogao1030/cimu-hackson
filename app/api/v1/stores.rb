@@ -55,6 +55,7 @@ module V1
       end
       post "delete" do
         store = Store.find_by(id: params[:id])
+        raise ActiveRecord::RecordNotFound.new("store isn't exist") if store.nil?
         store.delete
         {message: "删除成功"}
       end

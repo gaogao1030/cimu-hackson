@@ -46,7 +46,7 @@ module V1
        store.logo = params[:logo] || store.default_image
        store.creater_id= 1
        store.save
-       present store, with: Entites::Store
+       present store, with: Entities::Store
       end
 
       desc "删除商店"

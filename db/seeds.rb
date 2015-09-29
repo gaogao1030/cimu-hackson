@@ -99,7 +99,7 @@ stores = [
 ]
 
 i = 0
-10.times do
+11.times do
   store = Store.new
   store.name = stores[i][:name]
   store.kind = stores[i][:kind]

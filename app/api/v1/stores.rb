@@ -13,8 +13,10 @@ module V1
         optional :creater_id, type: Integer, values:[0,1]
       end
       get "index" do
+        kinds = nil
+        kinds = params[:kinds].split(",") unless params[:kinds].nil?
         stores = Store.ransack(
-          kind_cont_any: params[:kinds].split(","),
+          kind_cont_any: kinds,
           price_gteq: params[:min_price],
           price_lteq: params[:max_price],
           distance_gteq: params[:min_distance],

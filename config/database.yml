@@ -18,3 +18,4 @@ test:
 production:
   <<: *default
   database: xuan_eat_production
+  adapter: postgresql

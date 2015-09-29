@@ -23,6 +23,7 @@ gem "grape-rails-routes"
 gem "grape-swagger"
 gem "rack-cors", :require => "rack/cors"
 gem "ransack"
+gem 'pg'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

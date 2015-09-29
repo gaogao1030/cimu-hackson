@@ -17,5 +17,9 @@ test:
 
 production:
   <<: *default
-  database: xuan_eat_production
+  host: ec2-54-197-253-142.compute-1.amazonaws.com
+  database: d6vl78d3lc581i
+  user: ssumsfuqyluwwy
+  port: 5432
+  password: G26FG0UK2kOZvmjUIo_QDkyu9V
   adapter: postgresql

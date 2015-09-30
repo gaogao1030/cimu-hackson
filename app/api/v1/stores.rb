@@ -14,7 +14,7 @@ module V1
       end
       get "index" do
         kinds = nil
-        kinds = params[:kind].split(",") unless params[:kinds].nil?
+        kinds = params[:kind].split(",") unless params[:kind].nil?
         stores = Store.ransack(
           kind_cont_any: kinds,
           price_gteq: params[:min_price],

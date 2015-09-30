@@ -46,6 +46,7 @@ module V1
        store.distance = params[:distance]
        store.level = params[:level]
        store.logo = params[:logo] || store.default_image
+       store.address = params[:address]
        store.creater_id= 1
        store.save
        present store, with: Entities::Store
